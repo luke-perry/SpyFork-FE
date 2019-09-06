@@ -1,14 +1,10 @@
-import React from "react"
-import ReactDOM from "react-dom"
+import React from 'react'
+import ReactDOM from 'react-dom'
 import 'normalize.css'
 
-import "./styles.less"
+import App from './App'
+import "./mainStyle.less"
 
-class App extends React.Component {
-  render() {
-    return <div>Hello {this.props.name}</div>
-  }
-}
+const mountNode = document.getElementById('app')
 
-var mountNode = document.getElementById("app")
-ReactDOM.render(<App name="Jane" />, mountNode)
+ReactDOM.render(<App />, mountNode)

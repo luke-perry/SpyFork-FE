@@ -1,12 +1,14 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackTemplate = require('html-webpack-template')
 
 const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].[hash].js',
+    publicPath: '',
   },
   module: {
     rules: [
@@ -54,15 +56,16 @@ const config = {
     ]
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true,
   },
   plugins: [
-  //   new HtmlWebpackPlugin({
-  //     main: {
-  //       entry: [ "./src/index.js"]
-  //     },
-  //     meta: {viewport: 'width=device-width, initial-scale=1, maximum-scale=1'}
-  //  })
+    new HtmlWebpackPlugin({
+      template: HtmlWebpackTemplate,
+      appMountId: 'app',
+      title: 'SpyFell',
+      meta: {viewport: 'width=device-width, initial-scale=1, maximum-scale=1'},
+    }),
   ]  
 }
 
