@@ -1,13 +1,17 @@
 import React from "react"
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import Header from './components/header/Header'
+
 const Router = () => (
   <BrowserRouter>
-    <div>header</div>
+    <Header />
+    <section class="main-content">
 
-    <Switch>
-      <Route exact path="/login" component={() => (<div>Login Content</div>)} />
-    </Switch>
+      <Switch>
+        <Route exact path="/login" component={() => (<div>Login Content</div>)} />
+      </Switch>
+    </section>
   </BrowserRouter>
 )
 

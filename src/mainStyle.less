@@ -1,6 +1,12 @@
 @import '../assets/less/colors.less';
+@import '../assets/less/sizes.less';
 
 body {
   color: @primary-color;
-  background-color: @bg;
+  background-color: @background-primary;
+
+  .main-content {
+    margin-top: @header-height;
+    padding: @margin-common;
+  }
 }
