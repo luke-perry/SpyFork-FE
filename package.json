@@ -1,0 +1,38 @@
+{
+  "name": "empty-project-babel-less-png-react-react-hot-loader-svg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "build-dev": "webpack -d --mode development",
+    "build-prod": "webpack -p --mode production",
+    "start": "webpack-dev-server --hot --mode development"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.12.5",
+    "react-router": "^5.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "css-loader": "^3.0.0",
+    "less-loader": "^5.0.0",
+    "less": "^3.9.0",
+    "style-loader": "^0.23.1",
+    "file-loader": "^4.0.0",
+    "url-loader": "^2.0.1",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
